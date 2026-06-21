@@ -3,7 +3,7 @@ from typing import Optional
 from datetime import datetime
 
 class TaskBaseSchema(BaseModel):
-    titile: str = Field(..., max_length=150, min_length=5, description="Title of the task")
+    title: str = Field(..., max_length=150, min_length=5, description="Title of the task")
     description: Optional[str] = Field(None, max_length=500, description = "Description of the task")
     is_completed: bool = Field(..., description="state of the task")
 
